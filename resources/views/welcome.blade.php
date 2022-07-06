@@ -43,7 +43,7 @@
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top"  src="{{asset('uploads/blogs/'.$featured_blog->profile_image)}}"></a>
+                        <a href="#!"><img class="card-img-top"  src="{{asset('uploads/blogs/'.$featured_blog->profile_image)}}" width="550px" height="350px"></a>
                         <div class="card-body">
                             <div class="small text-muted">{{$featured_blog->created_at}}</div>
                             <h2 class="card-title">{{ $featured_blog->tittle}}</h2>
@@ -64,9 +64,9 @@
                                     {{-- @dd($blog); --}}
                                     @if(empty($blog->profile_image))
 
-                                    <img class="card-img-top" src="{{asset('defaultblog.png')}}" width="500px" height="250px">
+                                    <img class="card-img-top" src="{{asset('defaultblog.png')}}" width="250px" height="150px">
                                     @else
-                                    <img class="card-img-top" src="{{asset('uploads/blogs/'. $blog->profile_image)}}" width="500px" height="250px">
+                                    <img class="card-img-top" src="{{asset('uploads/blogs/'. $blog->profile_image)}}" width="250px" height="150px">
                                     @endif
                                 </a>
                                 <div class="card-body">

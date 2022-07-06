@@ -40,7 +40,7 @@
             <td>{{$form->dis}}</td>
             <td>
                 <a href="{{route('edit', $form->id)}}" > <button type="button" class="btn btn-succes">Edit</button></a>
-                <a href="{{route('delete', $form->id)}}" > <button type="button" class="btn btn-succes">Delete</button></a>
+                <a href="{{route('delete', $form->id)}}" > <button type="button" class="btn btn-danger">Delete</button></a>
             </td>
 
 

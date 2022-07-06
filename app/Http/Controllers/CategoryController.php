@@ -10,7 +10,6 @@ class CategoryController extends Controller
     public function store(Request $request){
         $this->validate($request, [
             'name' => 'required',
-
             'status' => 'required',
         ]);
         $category = new Category();
@@ -38,7 +37,7 @@ class CategoryController extends Controller
 
             'status' => 'required',
         ]);
-        $category = new Category();
+        $category =Category::find($id);
         $category->name=$request->name;
         $category->status=$request->status;
         $category->save();

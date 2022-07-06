@@ -44,10 +44,10 @@
 
                     <div class="form-group">
                         <label>Status</label>
-                        <select name="status"class="form-control">
+                        <select name="status" type="text" class="form-control">
                             <option value="" class="option_colour">Select Satus</option>
-                            <option value="1">Active</option>
-                            <option value="0">Inactive</option>
+                            <option id="active" for="active" value="1">Active</option>
+                            <option  id="inactive" for="inactive" value="0">Inactive</option>
 
 
                         </select>

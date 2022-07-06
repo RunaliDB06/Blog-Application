@@ -21,8 +21,9 @@
             <div class="col-12">
                 <div class="card">
                     @if (session()->has('message'))
-                        <div class="alert alert-success">
-                            {{ session()->get('message') }}
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times</button>
+                            <strong></strong>{{ session()->get('message') }}
                         </div>
                     @endif
                     <div class="card-header">
@@ -56,16 +57,16 @@
 
                                         <td>
                                             @if ($category->status == 1)
-                                                <spam class="badge badge-primary">Active</spam>
+                                                <span class="badge badge-success">Active</span>
                                             @else
-                                                <spam class="badge badge-danger">Inactive </spam>
+                                                <span class="badge badge-danger">Inactive </span>
                                             @endif
 
 
                                         </td>
                                         <td><a href="{{ route('category.edit', $category->id) }}"><button type="button"
-                                                    class="btn btn-success">Edit </button></a> <a
-                                                href="{{ route('category.delete', $category->id) }}"><button type="button"
+                                                    class="btn btn-success">Edit </button></a>
+                                                    <a href="{{ route('category.delete', $category->id) }}"><button type="button"
                                                     class="btn btn-danger">Delete </button></a></td>
                                     </tr>
                                 @endforeach

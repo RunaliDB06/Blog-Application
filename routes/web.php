@@ -26,12 +26,13 @@ Route::get('/dashboard', function () {
 
 
 require __DIR__.'/auth.php';
+Route::get('/',[FrontController::class,'index'])->name('welcome');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-  Route::get('/',[FrontController::class,'index'])->name('welcome');
+//   Route::get('/',[FrontController::class,'index'])->name('welcome');
   Route::get('show/{id}',[BlogController::class,'show'])->name('blog.show');
     Route::view('/form','form')->name('form');
     Route::get('blog/create',[BlogController::class,'create'])->name('blog.create');
